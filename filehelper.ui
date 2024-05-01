@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>FileHelper</string>
   </property>
-  <widget class="QWidget" name="centralwidget">
+  <widget class="QWidget" name="widget_Main">
    <layout class="QHBoxLayout" name="horizontalLayout_5">
     <property name="spacing">
      <number>5</number>
@@ -31,7 +31,7 @@
      <number>0</number>
     </property>
     <item>
-     <widget class="QWidget" name="widget_2" native="true">
+     <widget class="QWidget" name="widget_LeftPanel" native="true">
       <layout class="QVBoxLayout" name="verticalLayout">
        <property name="spacing">
         <number>5</number>
@@ -49,7 +49,7 @@
         <number>0</number>
        </property>
        <item>
-        <widget class="QWidget" name="widget" native="true">
+        <widget class="QWidget" name="widget_FolderButtons" native="true">
          <layout class="QHBoxLayout" name="horizontalLayout">
           <property name="spacing">
            <number>5</number>
@@ -67,23 +67,36 @@
            <number>0</number>
           </property>
           <item>
-           <widget class="QLabel" name="label">
+           <widget class="QLabel" name="label_Ignore_Folder">
             <property name="text">
-             <string>Folder</string>
+             <string>Folders</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton">
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_FolderAdd">
             <property name="text">
-             <string>PushButton</string>
+             <string>Add</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_2">
+           <widget class="QPushButton" name="pushButton_FolderDelete">
             <property name="text">
-             <string>PushButton</string>
+             <string>Remove</string>
             </property>
            </widget>
           </item>
@@ -91,23 +104,71 @@
         </widget>
        </item>
        <item>
-        <widget class="QTreeView" name="treeView"/>
+        <widget class="QTreeView" name="treeView_Folder"/>
        </item>
        <item>
-        <widget class="QLabel" name="label_2">
-         <property name="text">
-          <string>Recent Folder</string>
-         </property>
+        <widget class="QWidget" name="widget" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <property name="spacing">
+           <number>5</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_Ignore_RecentFolder">
+            <property name="text">
+             <string>Recent Folders</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_MostUsed">
+            <property name="text">
+             <string>Recent</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_FolderRecent">
+            <property name="text">
+             <string>Frequent</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
        <item>
-        <widget class="QTreeView" name="treeView_2"/>
+        <widget class="QListView" name="listView_RecentFolders"/>
        </item>
       </layout>
      </widget>
     </item>
     <item>
-     <widget class="QWidget" name="widget_3" native="true">
+     <widget class="QWidget" name="widget_RightPanel" native="true">
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <property name="spacing">
         <number>5</number>
@@ -125,7 +186,7 @@
         <number>0</number>
        </property>
        <item>
-        <widget class="QWidget" name="widget_4" native="true">
+        <widget class="QWidget" name="widget_FilesButtons" native="true">
          <layout class="QHBoxLayout" name="horizontalLayout_4">
           <property name="spacing">
            <number>5</number>
@@ -143,26 +204,33 @@
            <number>0</number>
           </property>
           <item>
-           <widget class="QLineEdit" name="lineEdit"/>
-          </item>
-          <item>
-           <widget class="QPushButton" name="pushButton_4">
-            <property name="text">
-             <string>a</string>
+           <widget class="QLineEdit" name="lineEdit_Search">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_5">
+           <widget class="QPushButton" name="pushButton_FilesDelete">
             <property name="text">
              <string>b</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_6">
+           <widget class="QPushButton" name="pushButton_ViewList">
             <property name="text">
              <string>c</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_ViewGrid">
+            <property name="text">
+             <string>d</string>
             </property>
            </widget>
           </item>
@@ -170,14 +238,14 @@
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_3">
+        <widget class="QLabel" name="label_Ignore_RecentFiles">
          <property name="text">
           <string>Recent Files</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QWidget" name="widget_5" native="true">
+        <widget class="QWidget" name="widget_RecentFiles" native="true">
          <property name="maximumSize">
           <size>
            <width>16777215</width>
@@ -201,10 +269,10 @@
            <number>0</number>
           </property>
           <item>
-           <widget class="QTreeView" name="treeView_5"/>
+           <widget class="QListView" name="listView_RecentFiles"/>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_7">
+           <widget class="QPushButton" name="pushButton_MoreRecentFiles">
             <property name="text">
              <string>More</string>
             </property>
@@ -214,50 +282,19 @@
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_4">
+        <widget class="QLabel" name="label_Ignore_Files">
          <property name="text">
           <string>Files</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QWidget" name="widget_6" native="true">
-         <layout class="QHBoxLayout" name="horizontalLayout_3">
-          <property name="spacing">
-           <number>0</number>
-          </property>
-          <property name="leftMargin">
-           <number>0</number>
-          </property>
-          <property name="topMargin">
-           <number>0</number>
-          </property>
-          <property name="rightMargin">
-           <number>0</number>
-          </property>
-          <property name="bottomMargin">
-           <number>0</number>
-          </property>
-          <item>
-           <widget class="QListView" name="listView"/>
-          </item>
-         </layout>
-        </widget>
+        <widget class="QListView" name="listView_Files"/>
        </item>
       </layout>
      </widget>
     </item>
    </layout>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>21</height>
-    </rect>
-   </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

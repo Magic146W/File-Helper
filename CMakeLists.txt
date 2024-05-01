@@ -23,6 +23,13 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(FileHelper
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+
+        recentlyusedstack.h recentlyusedstack.cpp
+        recentlyusedstack.h recentlyusedstack.cpp
+        folderusage.h folderusage.cpp
+
+        settingsmanager.h settingsmanager.cpp
+        settingkeys.h
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET FileHelper APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
